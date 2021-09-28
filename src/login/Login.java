@@ -68,7 +68,9 @@ public class Login extends Application {
         
         //Text
         final Text actiontarget = new Text();
+        scenetitle.setId("welcome-text");
         grid.add(actiontarget, 1, 6);
+        actiontarget.setId("actiontarget");
         
         //Button Event
         btn.setOnAction((ActionEvent e) -> {
@@ -80,6 +82,10 @@ public class Login extends Application {
         //Set Scene
         Scene scene = new Scene(grid, 300, 275);
         primaryStage.setScene(scene);
+        
+        //Initialize the stylesheets Variable
+        scene.getStylesheets().add
+                (Login.class.getResource("Login.css").toExternalForm());
         
         //Show Stage
         primaryStage.show();
